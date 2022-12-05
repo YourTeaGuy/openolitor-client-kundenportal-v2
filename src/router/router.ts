@@ -1,14 +1,20 @@
-import { createWebHashHistory, createRouter } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
+import { createWebHistory, createRouter } from "vue-router";
+import Dashboard from "@/views/Dashboard.vue";
+import News from "@/views/News.vue";
 
-const history = createWebHashHistory();
+const history = createWebHistory();
 const router = createRouter({
     history,
     routes: [
         {
             path: '/',
             name: "Home",
-            component: HelloWorld
+            component: Dashboard
+        },
+        {
+            path: '/news',
+            name: "News",
+            component: News
         }
     ]
 })

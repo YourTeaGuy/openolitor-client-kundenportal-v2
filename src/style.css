@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
+
+.btn {
+    @apply h-max;
+}
+.btn-primary{
+    background-color: aqua;
+}
+
 @tailwind utilities;
