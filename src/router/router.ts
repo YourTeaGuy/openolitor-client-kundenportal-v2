@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Dashboard from "@/views/Dashboard.vue";
 import News from "@/views/News.vue";
+import Shares from "@/views/Shares.vue";
 
 const history = createWebHistory();
 const router = createRouter({
@@ -15,6 +16,11 @@ const router = createRouter({
             path: '/news',
             name: "News",
             component: News
+        },
+        {
+            path: '/shares',
+            name: "Shares",
+            component: Shares
         }
     ]
 })
