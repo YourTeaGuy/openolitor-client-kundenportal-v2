@@ -4,13 +4,11 @@
 
     <div class="flex flex-row bg-red-500 container mx-auto justify-between">
 
-      <div class="flex-col hidden lg:flex bg-green-300 w-64 p-8">
+      <div class="flex-col hidden lg:flex bg-green-300 w-64 p-8 max-h-screen">
         <SideMenu />
       </div>
       
-      <div class="flex flex-col bg-green-400 grow p-8">
-        <router-view />
-        <router-view />
+      <div class="flex flex-col bg-green-400 grow p-8 max-h-screen">
         <router-view />
       </div>
 

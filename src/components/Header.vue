@@ -1,5 +1,5 @@
 <template>
-  <header class="flex bg-green-800 h-16">
+  <header class="flex bg-green-800 h-12 sm:h-16 w-full top-0 fixed">
     <div class="bg-green-600 container mx-auto flex flex-row justify-between items-center">
       <a href="/" class="flex items-center">
         <img src="src\assets\vue.svg" class="mx-3 h-6 sm:h-9" alt="Logo" />
