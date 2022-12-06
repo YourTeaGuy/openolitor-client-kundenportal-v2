@@ -15,46 +15,7 @@
     <div class="block md:flex justify-between">
       <div class="block">
         <h2 class="font-semibold text-2xl mb-4">Lieferung vom</h2>
-        <div class="flex mb-2">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-            ></path>
-          </svg>
-          <p>27.11.22, 16:20 Uhr</p>
-        </div>
-        <div class="flex mb-2">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-            ></path>
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-            ></path>
-          </svg>
-          <p>Abholort: Schlesinger Straße 5, 167394 Funkytown</p>
-        </div>
+        <DateAndAddress :date="date" :location="location" />
       </div>
       <div class="block md:mt-0 mt-7">
         <button class="rounded-md leading-5 bg-gray-700 py-1 px-2 text-gray-50">
@@ -106,18 +67,26 @@
 
 <script lang="ts">
 import { PropType } from "vue";
+import DateAndAddress from "../components/DateAndAddress.vue";
 type Delivery = {
   product: string;
   amount: number | string;
   unit: string;
 };
 export default {
+  data() {
+    return {
+      date: new Date(20222, 12, 22, 16, 20),
+      location: "Apfelweg 15, 50677 Köln",
+    };
+  },
   props: {
     shares: {
       type: Array as PropType<Delivery[]>,
       required: true,
     },
   },
+  components: { DateAndAddress },
 };
 </script>
 <style scoped>

@@ -14,8 +14,6 @@
         <li>Einstellungen</li>
       </ul>
       <div class="lg:col-span-3">
-        <h2 class="font-semibold text-3xl mb-4">Deine Anteile:</h2>
-        <Share />
         <h2 class="font-semibold text-3xl mb-4">Alle Lieferungen:</h2>
         <div v-for="(share, index) in allShares" :key="index">
           <Delivery :shares="share" />
