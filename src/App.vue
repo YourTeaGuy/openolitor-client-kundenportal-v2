@@ -1,17 +1,15 @@
 <template>
-  <div>
+  <div class="h-screen">
     <Header />
-
-    <div class="flex flex-row bg-red-500 container mx-auto justify-between">
-
-      <div class="flex-col hidden lg:flex bg-green-300 w-64 p-8 max-h-screen">
+    <div
+      class="container mx-auto lg:grid grid-cols-4 min-h-full mt-12 sm:mt-16"
+    >
+      <div class="hidden lg:block col-span-1">
         <SideMenu />
       </div>
-      
-      <div class="flex flex-col bg-green-400 grow p-8 max-h-screen">
+      <div class="lg:col-span-3">
         <router-view />
       </div>
-
     </div>
 
     <Footer />
@@ -22,4 +20,8 @@
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import SideMenu from "./components/SideMenu.vue";
+
+/* export default {
+  components: { Header, Footer, SideMenu },
+}; */
 </script>
