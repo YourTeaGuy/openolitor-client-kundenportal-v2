@@ -1,7 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Dashboard from "@/views/Dashboard.vue";
 import News from "@/views/News.vue";
-import Shares from "@/views/Shares.vue";
+import Deliveries from "@/views/Deliveries.vue";
 
 const history = createWebHistory();
 const router = createRouter({
@@ -18,9 +18,9 @@ const router = createRouter({
             component: News
         },
         {
-            path: '/shares',
-            name: "Shares",
-            component: Shares
+            path: '/deliveries',
+            name: "Deliveries",
+            component: Deliveries
         }
     ]
 })

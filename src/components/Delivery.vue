@@ -106,7 +106,7 @@
 
 <script lang="ts">
 import { PropType } from "vue";
-type ShareOf = {
+type Delivery = {
   product: string;
   amount: number | string;
   unit: string;
@@ -114,7 +114,7 @@ type ShareOf = {
 export default {
   props: {
     shares: {
-      type: Array as PropType<ShareOf[]>,
+      type: Array as PropType<Delivery[]>,
       required: true,
     },
   },

@@ -14,8 +14,11 @@
         <li>Einstellungen</li>
       </ul>
       <div class="lg:col-span-3">
+        <h2 class="font-semibold text-3xl mb-4">Deine Anteile:</h2>
+        <Share />
+        <h2 class="font-semibold text-3xl mb-4">Alle Lieferungen:</h2>
         <div v-for="(share, index) in allShares" :key="index">
-          <ShareOf :shares="share" />
+          <Delivery :shares="share" />
         </div>
       </div>
     </div>
@@ -24,7 +27,8 @@
 
 <script lang="ts">
 import Vue from "vue";
-import ShareOf from "../components/ShareOf.vue";
+import Delivery from "../components/Delivery.vue";
+import Share from "../components/Share.vue";
 
 export default {
   data() {
@@ -72,6 +76,6 @@ export default {
       ],
     };
   },
-  components: { ShareOf },
+  components: { Delivery, Share },
 };
 </script>
