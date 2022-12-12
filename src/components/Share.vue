@@ -1,0 +1,17 @@
+<template>
+  <div class="lg:grid grid-cols-2 gap-4">
+    <div
+      class="
+        border-0
+        bg-gray-100
+        py-6
+        px-2
+        md:px-6
+        rounded-lg
+        col-span-4
+        lg:col-span-1
+        mb-10
+      "
+    ></div>
+  </div>
+</template>
