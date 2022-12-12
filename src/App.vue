@@ -1,7 +1,17 @@
 <template>
-  <div>
+  <div class="h-screen">
     <Header />
-    <router-view />
+    <div
+      class="container mx-auto lg:grid grid-cols-4 min-h-full mt-12 sm:mt-16"
+    >
+      <div class="hidden lg:block col-span-1">
+        <SideMenu />
+      </div>
+      <div class="lg:col-span-3">
+        <router-view />
+      </div>
+    </div>
+
     <Footer />
   </div>
 </template>
@@ -9,4 +19,9 @@
 <script setup lang="ts">
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
+import SideMenu from "./components/SideMenu.vue";
+
+/* export default {
+  components: { Header, Footer, SideMenu },
+}; */
 </script>
