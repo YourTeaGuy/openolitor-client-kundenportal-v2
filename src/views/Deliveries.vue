@@ -3,10 +3,14 @@
     <div class="bg-gray-400 hidden lg:block h-64">menu placeholder</div>
     <div class="col-span-3">anteil</div>
   </div> -->
-  <div class="py-1 px-2 md:px-6 sm:py-6">
+  <div class="lg:py-1 lg:px-2 md:px-6 sm:py-6">
     <h2 class="font-semibold text-3xl mb-4">Alle Lieferungen:</h2>
     <div v-for="(share, index) in allShares" :key="index">
-      <Delivery :shares="share" />
+      <Delivery
+        @toggleMe="toggleDelivery(index)"
+        :shares="share"
+        :isActive="checkIndex(index)"
+      />
     </div>
   </div>
 </template>
@@ -14,11 +18,10 @@
 <script lang="ts">
 import Vue from "vue";
 import Delivery from "../components/Delivery.vue";
-import Share from "../components/Share.vue";
-
 export default {
   data() {
     return {
+      activeItem: 1 as number | null,
       allShares: [
         [
           { product: "Tomaten", amount: 0.5, unit: "kg" },
@@ -62,6 +65,37 @@ export default {
       ],
     };
   },
-  components: { Delivery, Share },
+  components: { Delivery },
+  methods: {
+    toggleDelivery(index: number) {
+      console.log("hi there", index);
+      if (index == this.activeItem) {
+        this.activeItem = null;
+      } else {
+        this.activeItem = index;
+      }
+    },
+    msgreceived(index: number) {
+      console.log("got message", index);
+    },
+    checkIndex(index: number): boolean {
+      if (index == this.activeItem) {
+        console.log(index, "is true");
+        return true;
+      } else {
+        console.log(index, "is false");
+        return false;
+      }
+    },
+  },
+  watch: {
+    isActiveItem(index: number): boolean {
+      if (index == this.activeItem) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
 };
 </script>
