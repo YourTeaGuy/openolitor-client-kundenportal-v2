@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <p>asdjfkl</p>
-    <div class="btn">asdf</div>
-  </div>
+  <NewsCard />
+  <NewsCard />
+  <NewsCard />
 </template>
 
 <script lang="ts">
-</script>
-
-<style lang="css" scoped>
-.btn {
+import NewsCard from "../components/NewsCard.vue";
+export default {
+  components: {NewsCard}
 }
-</style>
+</script>

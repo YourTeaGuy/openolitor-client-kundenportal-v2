@@ -9,5 +9,7 @@ module.exports = {
       //custom colors and other stuff would come here
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }
