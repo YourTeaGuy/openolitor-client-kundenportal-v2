@@ -3,7 +3,7 @@
     <div class="bg-gray-400 hidden lg:block h-64">menu placeholder</div>
     <div class="col-span-3">anteil</div>
   </div> -->
-  <div class="container mx-auto py-1 px-2 md:px-6 sm:py-6">
+  <div class="py-1 px-2 md:px-6 sm:py-6">
     <h2 class="font-semibold text-3xl mb-4">Alle Lieferungen:</h2>
     <div v-for="(share, index) in allShares" :key="index">
       <Delivery :shares="share" />
