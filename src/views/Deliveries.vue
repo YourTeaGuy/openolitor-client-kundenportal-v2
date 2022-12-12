@@ -21,7 +21,7 @@ import Delivery from "../components/Delivery.vue";
 export default {
   data() {
     return {
-      activeItem: 1 as number | null,
+      activeItem: 0 as number | null,
       allShares: [
         [
           { product: "Tomaten", amount: 0.5, unit: "kg" },
