@@ -34,10 +34,7 @@
         </div>
         <!-- Button "zum gesamten Beitrag" -->
         <div class="flex items-center justify-center">
-          <div
-            class="mt-3 flex max-w-fit rounded-full border-solid border-blue-700 bg-blue-500 p-3 hover:border-4 hover:p-2">
-            <span class="mx-3 border-solid border-black text-lg leading-none text-white">zum gesamten Beitrag ➜</span>
-          </div>
+          <Btn class="btn-enabled color-default">Zum Beitrag</Btn>
         </div>
       </div>
     </div>

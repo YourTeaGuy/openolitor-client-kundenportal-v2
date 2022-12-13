@@ -28,34 +28,42 @@
   -webkit-transform: rotate(45deg);
 }
 
+/* BUTTONS ======================================== */
+
 .btn {
-  /* abstract */
-  @apply rounded-md py-1 px-2 transition-all duration-300;
-}
-
-.btn:hover {
-  @apply transition-all duration-300;
-}
-
-.btn:active {
-  @apply outline outline-2 outline-black transition-none;
+  @apply rounded-full py-1 px-3 transition-all duration-100;
 }
 
 .btn-disabled {
-  @apply btn transition-none outline-none;
+  @apply btn bg-white cursor-not-allowed;
 }
 
-.btn-gray {
-  @apply bg-gray-500 text-gray-50;
+.btn-enabled {
+  @apply btn cursor-pointer active:outline active:outline-4 active:outline-black;
+}
+
+/* hover über .color-xxx:hover */
+
+
+/* BUTTON COLORS ======================================== */
+
+.color-default {
+  @apply bg-gray-300 hover:bg-gray-400 active:bg-white;
 }
 
 
+/* CLICKABLE TEXTS ======================================== */
+
+.txt-clickable {
+  @apply hover:underline active:underline btn-enabled;
+}
+
+.txt-clickable:active {
+  @apply btn-enabled;
+}
 
 @tailwind utilities;
 
 @layer components {
   /* maybe put arrow into own component with scoped css */
-
-
-
 }
