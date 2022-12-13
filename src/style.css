@@ -1,35 +1,61 @@
 @tailwind base;
 @tailwind components;
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.arrow.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.arrow.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.arrow.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.arrow.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.btn {
+  /* abstract */
+  @apply rounded-md py-1 px-2 transition-all duration-300;
+}
+
+.btn:hover {
+  @apply transition-all duration-300;
+}
+
+.btn:active {
+  @apply outline outline-2 outline-black transition-none;
+}
+
+.btn-disabled {
+  @apply btn transition-none outline-none;
+}
+
+.btn-gray {
+  @apply bg-gray-500 text-gray-50;
+}
+
+
+
 @tailwind utilities;
 
-@layer components{
-    /* maybe put arrow into own component with scoped css */
-    .arrow {
-        border: solid black;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-      }
-      
-      .arrow.right {
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-      }
-      
-      .arrow.left {
-        transform: rotate(135deg);
-        -webkit-transform: rotate(135deg);
-      }
-      
-      .arrow.up {
-        transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
-      }
-      
-      .arrow.down {
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-      }
+@layer components {
+  /* maybe put arrow into own component with scoped css */
+
 
 
 }

@@ -42,11 +42,8 @@
           />
         </div>
         <div class="block md:mt-0 mt-7">
-          <button
-            class="rounded-md leading-5 bg-gray-700 py-1 px-2 text-gray-50"
-          >
-            Abwesenheit eintragen
-          </button>
+          <Btn class="btn btn-disabled">Abwesenheit eintragen</Btn>
+          
           <p class="mt-1 text-sm md:text-right">noch 3 Tage möglich</p>
         </div>
       </div>

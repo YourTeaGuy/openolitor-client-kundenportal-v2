@@ -45,9 +45,9 @@ export default {
 
 <style scoped>
 a {
-  @apply block py-3 hover:ml-5 active:ml-5 transition-all duration-200 ease-in-out hover:duration-300;
+  @apply block py-3 hover:ml-2 active:ml-5 transition-all duration-100 ease-in-out hover:duration-500;
 }
 .indent {
-  @apply font-semibold ml-5 active:ml-5 transition-all duration-200 ease-in-out hover:duration-300;
+  @apply font-semibold ml-5 active:ml-5 transition-all duration-100 ease-in-out hover:duration-500;
 }
 </style>
