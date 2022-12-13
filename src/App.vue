@@ -23,5 +23,10 @@ import SideMenu from "./components/SideMenu.vue";
 
 /* export default {
   components: { Header, Footer, SideMenu },
-}; */
+  computed: {
+    logger() {
+      console.log("route name: ", this.$route.name);
+    },
+  },
+}); */
 </script>
