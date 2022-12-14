@@ -1,6 +1,5 @@
 <template>
   <ViewHeadline text="Neuigkeiten" />
-  <Label text="label" />
   <NewsCard />
   <NewsCard />
   <NewsCard />

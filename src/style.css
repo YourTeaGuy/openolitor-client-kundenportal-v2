@@ -31,7 +31,7 @@
 /* BUTTONS ======================================== */
 
 .btn {
-  @apply rounded-full py-1 px-3 transition-colors duration-300;
+  @apply rounded-full py-1 px-3 transition-colors duration-300 w-fit;
 }
 
 .btn-disabled {
@@ -52,6 +52,16 @@
 
 .txt-clickable {
   @apply cursor-pointer hover:underline;
+}
+
+/* LABELS ======================================== */
+
+.label {
+  @apply bg-gray-300 rounded-full py-1 px-3 transition-colors duration-300 w-fit h-fit text-base;
+}
+
+.label-clickable {
+  @apply label hover:bg-gray-400;
 }
 
 @tailwind utilities;

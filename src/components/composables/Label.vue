@@ -18,12 +18,12 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="bg-green-300">
+  <div class="label">
     <div @click="toggleVisibility">
     {{ text }}
     </div>
     <div>
-      <LabelPopUp description="Kontaktmöglichkeit:" contact=123 is-visible="false"/>
+      <!--<LabelPopUp description="Kontaktmöglichkeit:" contact=123 is-visible="false"/>-->
     </div>
   </div>
 </template>
