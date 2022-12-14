@@ -9,7 +9,7 @@
 
 <template>
   <div>
-    <h2 class="font-semibold text-2xl py-6 px-2">
+    <h2 class="font-semibold text-2xl py-6 px-2 block lg:hidden">
       <slot/>
     </h2>
   </div>

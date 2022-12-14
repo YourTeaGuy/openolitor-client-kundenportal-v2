@@ -1,27 +1,12 @@
 <template>
-  <div class="container mx-auto py-1 px-2 md:px-6 sm:py-6">
-    <div class="lg:grid grid-cols-4 gap-4">
-      <ul class="hidden col-span-1 h-screen lg:block pt-6">
-        <li>Übersicht</li>
-        <li>Lieferungen</li>
-        <li>Neuigkeiten</li>
-        <li>Aufgaben</li>
-        <li>Rechnungen</li>
-        <li>Einstellungen</li>
-      </ul>
-      <div class="lg:col-span-3">
-        <h2 class="font-semibold text-3xl mb-4">Alle Arbeitseinsätze:</h2>
-        <div v-for="(task, index) in allTasks" :key="index">
-          <Delivery :task="task" />
-        </div>
-      </div>
-    </div>
-  </div>
+  <ViewHeadline>Alle Aufgaben</ViewHeadline>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import ViewHeadline from "../components/composables/ViewHeadline.vue";
 export default {
+  components: {ViewHeadline},
   data() {
     return {
       allTasks: [

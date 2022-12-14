@@ -1,4 +1,5 @@
 <template>
+  <ViewHeadline>Alle Neuigkeiten</ViewHeadline>
   <NewsCard />
   <NewsCard />
   <NewsCard />
@@ -6,7 +7,8 @@
 
 <script lang="ts">
 import NewsCard from "../components/NewsCard.vue";
+import ViewHeadline from "../components/composables/ViewHeadline.vue";
 export default {
-  components: {NewsCard}
+  components: {NewsCard, ViewHeadline}
 }
 </script>
