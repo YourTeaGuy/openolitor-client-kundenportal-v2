@@ -39,27 +39,19 @@
 }
 
 .btn-enabled {
-  @apply btn cursor-pointer active:outline active:outline-2 outline-black;
+  @apply btn cursor-pointer active:outline active:outline-2;
 }
-
-/* hover über .color-xxx:hover */
-
 
 /* BUTTON COLORS ======================================== */
 
 .color-default {
-  @apply bg-gray-300 hover:bg-gray-400 active:bg-gray-300;
+  @apply bg-gray-300 hover:bg-gray-400 active:bg-gray-300 outline-black;
 }
-
 
 /* CLICKABLE TEXTS ======================================== */
 
 .txt-clickable {
-  @apply hover:underline active:underline btn-enabled;
-}
-
-.txt-clickable:active {
-  @apply btn-enabled;
+  @apply cursor-pointer hover:underline;
 }
 
 @tailwind utilities;

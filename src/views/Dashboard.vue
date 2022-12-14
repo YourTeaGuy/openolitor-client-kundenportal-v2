@@ -1,5 +1,5 @@
 <template>
-    <ViewHeadline>Übersicht</ViewHeadline>
+      <ViewHeadline text="Übersicht" />
 </template>
 
 <script lang="ts">

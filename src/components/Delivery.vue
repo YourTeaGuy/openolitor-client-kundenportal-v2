@@ -39,7 +39,7 @@
           <DateAndAddress :startDate="startDate" :endDate="endDate" :location="location" />
         </div>
         <div class="block md:mt-0 mt-7">
-          <Btn class="btn-enabled color-default">Abwesenheit eintragen</Btn>
+          <Btn class="btn-enabled color-default" text="Abwesenheit eintragen" />
           <p class="mt-1 text-sm md:text-right">noch 3 Tage möglich</p>
         </div>
       </div>
@@ -93,6 +93,7 @@ import { PropType } from "vue";
 import DateAndAddress from "../components/DateAndAddress.vue";
 import { formatDate } from "../../lib/utils";
 import CardHeadline from "./composables/CardHeadline.vue";
+import Btn from "./composables/Btn.vue";
 
 type Delivery = {
   product: string;
@@ -134,7 +135,7 @@ export default {
     console.log(this.isActive);
   },
 
-  components: { DateAndAddress, CardHeadline },
+  components: { DateAndAddress, CardHeadline, Btn },
 };
 </script>
 <style scoped>

@@ -2,21 +2,26 @@
 <!-- todo: basis css hinzufügen mit tailwind, damit die anordnung einigermaßen funktioniert -->
 
 <script lang="ts">
-  import { defineComponent } from "vue";
-  export default defineComponent({
-    props: ['descriptionText', 'contentList', 'visible']
-  })
+import { defineComponent } from "vue";
+export default defineComponent({
+  data() {
+    return {
+    }
+  }
+})
 </script>
 
 <template>
   <div>
-    <h3> <!-- stylen wir mit html oder nicht? -->
-      {{ descriptionText }}
+<!--
+    <h3>
+      {{ description }}
     </h3>
     <ul v-for="item in contentList">
       <li>
-        {{item}}
+        {{ item }}
       </li>
     </ul>
+    -->
   </div>
-<template/>
+</template>

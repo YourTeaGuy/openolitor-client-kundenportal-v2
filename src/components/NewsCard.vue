@@ -34,7 +34,7 @@
         </div>
         <!-- Button "zum gesamten Beitrag" -->
         <div class="flex items-center justify-center">
-          <Btn class="btn-enabled color-default">Zum Beitrag</Btn>
+          <Btn class="btn-enabled color-default" text="Zum Beitrag" />
         </div>
       </div>
     </div>
@@ -42,8 +42,8 @@
 </template>
 
 <script lang="ts">
+import Btn from './composables/Btn.vue';
 export default {
-  components: {
-  }
+  components: { Btn }
 }
 </script>

@@ -4,7 +4,7 @@
     <div class="col-span-3">anteil</div>
   </div> -->
   <div class="lg:py-1 lg:px-2 md:px-6 sm:py-6">
-    <ViewHeadline>Alle Lieferungen</ViewHeadline>
+    <ViewHeadline text="Alle Lieferungen" />
     <div v-for="(share, index) in allShares" :key="index">
       <Delivery
         @toggleMe="toggleDelivery(index)"

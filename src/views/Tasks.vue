@@ -1,9 +1,8 @@
 <template>
-  <ViewHeadline>Alle Aufgaben</ViewHeadline>
+    <ViewHeadline text="Alle Aufgaben" />
 </template>
 
 <script lang="ts">
-import Vue from "vue";
 import ViewHeadline from "../components/composables/ViewHeadline.vue";
 export default {
   components: {ViewHeadline},

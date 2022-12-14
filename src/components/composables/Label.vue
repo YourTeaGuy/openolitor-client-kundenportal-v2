@@ -5,9 +5,7 @@
 import { defineComponent } from "vue";
 import LabelPopUp from "./LabelPopUp.vue";
 export default defineComponent({
-  props: [
-    "text"
-  ],
+  props: {text: String},
   components: { LabelPopUp },
   setup() {
     let popUpVisibility = false;
@@ -20,12 +18,12 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
+  <div class="bg-green-300">
     <div @click="toggleVisibility">
     {{ text }}
     </div>
     <div>
-      <LabelPopUp description-text="Kontaktmöglichkeit:" content-list="<!-- todo: liste mocken/erstellen -->" visible=""/>
+      <LabelPopUp description="Kontaktmöglichkeit:" contact=123 is-visible="false"/>
     </div>
   </div>
-<template/>
+</template>

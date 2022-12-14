@@ -15,4 +15,4 @@
       {{ text }}
     </button>
   </div>
-<template/>
+</template>
