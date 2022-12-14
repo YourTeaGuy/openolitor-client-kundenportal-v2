@@ -11,22 +11,34 @@ const router = createRouter({
         {
             path: '/',
             name: "Home",
-            component: Dashboard
+            component: Dashboard,
+            meta: {
+                breadcumb: "Start", // for breadcumbs
+            }
         },
         {
             path: '/news',
             name: "News",
-            component: News
+            component: News,
+            meta: {
+                breadcumb: "Neuigkeiten", // for breadcumbs
+            }
         },
         {
             path: '/deliveries',
             name: "Deliveries",
-            component: Deliveries
+            component: Deliveries,
+            meta: {
+                breadcumb: "Lieferungen", // for breadcumbs
+            }
         },
         {
             path: '/tasks',
             name: "Tasks",
-            component: Tasks
+            component: Tasks,
+            meta: {
+                breadcumb: "Aufgaben", // for breadcumbs
+            }
         },
     ]
 })
