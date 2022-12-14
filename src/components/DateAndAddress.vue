@@ -23,7 +23,7 @@
       </p>
       <p v-else>
         {{ timeToString(startDate) }}
-        <span v-if="endDate"> - {{ timeToString(endDate) }} h</span>
+        <span v-if="endDate"> - {{ timeToString(endDate) }} Uhr</span>
         <br />
         {{ dateToString(startDate, true) }}
       </p>

@@ -31,7 +31,7 @@
 /* BUTTONS ======================================== */
 
 .btn {
-  @apply rounded-full py-1 px-3 transition-all duration-100;
+  @apply rounded-full py-1 px-3 transition-colors duration-300;
 }
 
 .btn-disabled {
@@ -39,7 +39,7 @@
 }
 
 .btn-enabled {
-  @apply btn cursor-pointer active:outline active:outline-4 active:outline-black;
+  @apply btn cursor-pointer active:outline active:outline-2 outline-black;
 }
 
 /* hover über .color-xxx:hover */
@@ -48,7 +48,7 @@
 /* BUTTON COLORS ======================================== */
 
 .color-default {
-  @apply bg-gray-300 hover:bg-gray-400 active:bg-white;
+  @apply bg-gray-300 hover:bg-gray-400 active:bg-gray-300;
 }
 
 

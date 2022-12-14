@@ -3,16 +3,14 @@
 <script lang="ts">
   import { defineComponent } from "vue";
   export default defineComponent({
-    props: [
-      'text'
-    ]
+
   })
 </script>
 
 <template>
   <div>
-    <button @click="$emit('clicked')">
-      {{ text }}
-    </button>
+    <h2 class="font-semibold text-2xl cursor-pointer">
+      <slot/>
+    </h2>
   </div>
-<template/>
+</template>
