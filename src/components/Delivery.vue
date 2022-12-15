@@ -43,7 +43,7 @@
         </div>
         <div class="block md:mt-0 mt-7">
           <Btn class="btn btn-disabled">Abwesenheit eintragen</Btn>
-          
+
           <p class="mt-1 text-sm md:text-right">noch 3 Tage möglich</p>
         </div>
       </div>

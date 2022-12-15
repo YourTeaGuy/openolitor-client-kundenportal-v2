@@ -1,5 +1,5 @@
-<template>
-  <div class="w-full h-full fixed bg-gray-100/90 top-0 left-0 z-[1]">
+<template >
+  <div class="w-full h-full fixed bg-gray-100/90 z-10 top-0 left-0">
     <div class="h-100 flex h-screen justify-center items-center">
       <ul class="block text-center my-auto">
         <li
