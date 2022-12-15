@@ -1,17 +1,5 @@
 <template>
-  <div
-    class="
-      border-b-2 border-grey-400
-      lg:border-0
-      bg-gray-100
-      py-6
-      px-2
-      md:px-6
-      lg:rounded-lg
-      col-span-4
-      lg:col-span-3 lg:mb-10
-    "
-  >
+  <div class="item-box">
     <div
       v-if="!isActive"
       @click="toggleDelivery()"
@@ -21,7 +9,7 @@
 
 
       -->
-      <h2 class="font-semibold text-2xl cursor-pointer">
+      <h2 class="txt-headline-component cursor-pointer">
         {{ dateToString(startDate) }}
       </h2>
       <div class="lg:hidden ml-5 w-5 h-5 inline-block cursor-pointer">
@@ -35,9 +23,9 @@
             <!--<h2 class="font-semibold text-2xl mb-4 cursor-pointer">
               {{ dateToString(startDate) }}
             </h2>-->
-            <CardHeadline class="mb-4">
+            <h2 class="txt-headline-component">
               {{ dateToString(startDate) }}
-            </CardHeadline>
+            </h2>
             <div class="lg:hidden ml-5 w-5 h-5 inline-block cursor-pointer">
               <Arrow direction="up"></Arrow>
             </div>
@@ -143,7 +131,12 @@ export default {
     return {
       startDate: new Date(2021, 11, 1, 16, 20),
       endDate: new Date(2021, 11, 1, 19, 20),
-      location: "Apfelweg 15, 50677 Köln",
+      location: {
+        street: "Apfelweg",
+        streetNo: "15",
+        postalCode: "19575",
+        city: "Bottrop",
+      },
       activeItem: null as number | null,
     };
   },

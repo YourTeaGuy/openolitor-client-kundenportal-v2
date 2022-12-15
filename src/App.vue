@@ -7,7 +7,7 @@
       <div class="hidden lg:block col-span-1">
         <SideMenu />
       </div>
-      <div class="lg:col-span-3">
+      <div class="lg:col-span-3 lg:py-1 lg:px-2 md:px-6 sm:py-6">
         <router-view />
       </div>
     </div>
@@ -20,7 +20,7 @@
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import SideMenu from "./components/SideMenu.vue";
-import components from '@/components';
+import components from "@/components";
 
 /* export default {
   components: { Header, Footer, SideMenu },

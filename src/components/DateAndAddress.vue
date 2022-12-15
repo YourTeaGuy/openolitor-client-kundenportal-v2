@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <div class="flex mb-2">
+  <div class="mt-4">
+    <div class="flex mb-2 items-center">
       <svg
-        class="w-6 h-6 mr-2"
+        class="w-6 h-6 mr-3"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -22,15 +22,14 @@
         {{ timeToString(endDate) }}
       </p>
       <p v-else>
+        {{ dateToString(startDate, true) }}<br />
         {{ timeToString(startDate) }}
         <span v-if="endDate"> - {{ timeToString(endDate) }} Uhr</span>
-        <br />
-        {{ dateToString(startDate, true) }}
       </p>
     </div>
-    <div class="flex mb-2">
+    <div class="flex mb-2 items-center">
       <svg
-        class="w-6 h-6 mr-2"
+        class="w-6 h-6 mr-3"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -49,14 +48,24 @@
           d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
         ></path>
       </svg>
-      <p>{{ location }}</p>
+      <div class="block">
+        <p>{{ location.street }} {{ location.streetNo }}</p>
+
+        <p>{{ location.postalCode }}, {{ location.city }}</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue, { PropType } from "vue";
 import { formatTime, formatDate } from "../../lib/utils";
+type Address = {
+  street: string;
+  streetNo: string;
+  postalCode: string;
+  city: string;
+};
 export default {
   data() {
     return {};
@@ -71,7 +80,7 @@ export default {
       required: false,
     },
     location: {
-      type: String,
+      type: Object as PropType<Address>,
       required: true,
     },
   },

@@ -1,6 +1,15 @@
 @tailwind base;
 @tailwind components;
 
+/* FONT STYLES ======================================== */
+
+.txt-headline-big{
+  @apply text-4xl text-gray-800 font-bold mt-4;
+}
+.txt-headline-component{
+  @apply font-semibold text-2xl;
+}
+
 
 /* BUTTONS ======================================== */
 
@@ -38,8 +47,37 @@
   @apply label hover:bg-gray-400;
 }
 
+/* ITEMS, BOXES, CONTAINER, LAYOUT ======================================== */
+
+.item-box{
+  @apply border-b-2 border-gray-400
+  lg:border-0
+  bg-gray-100
+  py-6
+  px-2
+  md:px-6
+  lg:rounded-lg
+  col-span-4
+  lg:col-span-3 lg:mt-10
+  transition-all
+  duration-200;
+}
+ .item-box.no-corners-bottom{
+  @apply rounded-bl-none rounded-br-none ;
+ }
+ .item-box.no-corners-top{
+  @apply rounded-tl-none rounded-tr-none mt-0 ;
+ }
+
+.item-box-hover:hover, .item-box-active{
+  @apply transition-all
+  duration-200
+  scale-[1.02] shadow-xl cursor-pointer
+}
+
+.category{
+  @apply px-3 py-0.5  mx-1 bg-blue-700 rounded-full text-xs font-bold text-gray-100 tracking-widest border-0 ;
+}
+
 @tailwind utilities;
 
-@layer components {
-  /* maybe put arrow into own component with scoped css */
-}

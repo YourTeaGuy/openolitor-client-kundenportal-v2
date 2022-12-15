@@ -3,8 +3,10 @@
     <div class="bg-gray-400 hidden lg:block h-64">menu placeholder</div>
     <div class="col-span-3">anteil</div>
   </div> -->
-  <div class="lg:py-1 lg:px-2 md:px-6 sm:py-6">
-    <ViewHeadline text="Alle Lieferungen" />
+  <div>
+    <!--     <ViewHeadline text="Alle Lieferungen" />
+ -->
+    <h1 class="txt-headline-big">Alle Lieferungen:</h1>
     <div v-for="(share, index) in allShares" :key="index">
       <Delivery
         @toggleMe="toggleDelivery(index)"
