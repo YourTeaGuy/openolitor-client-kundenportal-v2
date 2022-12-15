@@ -21,7 +21,7 @@
         {{ dateToString(startDate) }}
       </h2>
       <div class="lg:hidden ml-5 w-5 h-5 inline-block cursor-pointer">
-        <i class="arrow down"></i>
+        <Arrow direction="down"></Arrow>
       </div>
     </div>
     <div v-else-if="isActive" class="transition-all duration-200 ease-in-out">
@@ -32,7 +32,7 @@
               {{ dateToString(startDate) }}
             </h2>
             <div class="lg:hidden ml-5 w-5 h-5 inline-block cursor-pointer">
-              <i class="arrow up"></i>
+              <Arrow direction="up"></Arrow>
             </div>
           </div>
           <DateAndAddress
@@ -64,13 +64,14 @@
             <span class=""
               >{{ item.amount }} {{ item.unit }}
               <div class="ml-5 w-5 h-5 inline-block cursor-pointer">
-                <i
+                <Arrow :direction="isActiveItem(index)"></Arrow>
+                <!-- <i
                   :class="{
                     up: index == activeItem,
                     down: index != activeItem,
                   }"
                   class="arrow"
-                ></i>
+                ></i> -->
               </div>
             </span>
           </div>
@@ -121,6 +122,7 @@
 <script lang="ts">
 import { PropType } from "vue";
 import DateAndAddress from "../components/DateAndAddress.vue";
+import Arrow from "../components/composables/Arrow.vue";
 import { formatDate } from "../../lib/utils";
 
 type Delivery = {
@@ -158,12 +160,19 @@ export default {
     toggleDelivery() {
       this.$emit("toggleMe");
     },
+    isActiveItem(index: number): string {
+      let direction = "down";
+      if (index == this.activeItem) {
+        direction = "up";
+      }
+      return direction;
+    },
   },
   mounted() {
     console.log(this.isActive);
   },
 
-  components: { DateAndAddress },
+  components: { DateAndAddress, Arrow },
 };
 </script>
 <style scoped>

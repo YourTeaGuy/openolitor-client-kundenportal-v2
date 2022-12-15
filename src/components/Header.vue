@@ -1,5 +1,5 @@
 <template>
-  <header class="flex bg-blue-500 h-12 sm:h-16 w-full top-0 fixed">
+  <header class="flex bg-blue-500 h-12 sm:h-16 w-full top-0 fixed z-10">
     <div
       class="
         bg-blue-500
@@ -27,9 +27,9 @@
       <span class="flex-col hidden lg:flex self-center text-xl mr-3 text-white"
         >Abmelden</span
       >
-      <BurgerMenu class="z-50 lg:hidden" @click="toggleMenu()" />
+      <BurgerMenu class="z-20 lg:hidden" @click="toggleMenu()" />
       <MobileMenu
-        class="z-40"
+        class="z-10"
         @toggleMobileMenu="toggleMenu()"
         v-if="menuOpen"
       ></MobileMenu>
