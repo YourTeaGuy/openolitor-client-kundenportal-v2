@@ -17,6 +17,10 @@
       @click="toggleDelivery()"
       class="w-100 flex justify-between"
     >
+      <!--
+
+
+      -->
       <h2 class="font-semibold text-2xl cursor-pointer">
         {{ dateToString(startDate) }}
       </h2>
@@ -28,9 +32,12 @@
       <div class="block md:flex justify-between">
         <div class="block">
           <div class="flex justify-between" @click="toggleDelivery()">
-            <h2 class="font-semibold text-2xl mb-4 cursor-pointer">
+            <!--<h2 class="font-semibold text-2xl mb-4 cursor-pointer">
               {{ dateToString(startDate) }}
-            </h2>
+            </h2>-->
+            <CardHeadline class="mb-4">
+              {{ dateToString(startDate) }}
+            </CardHeadline>
             <div class="lg:hidden ml-5 w-5 h-5 inline-block cursor-pointer">
               <Arrow direction="up"></Arrow>
             </div>
@@ -42,8 +49,7 @@
           />
         </div>
         <div class="block md:mt-0 mt-7">
-          <Btn class="btn btn-disabled">Abwesenheit eintragen</Btn>
-
+          <Btn class="btn-enabled color-default" text="Abwesenheit eintragen" />
           <p class="mt-1 text-sm md:text-right">noch 3 Tage möglich</p>
         </div>
       </div>
@@ -124,6 +130,8 @@ import { PropType } from "vue";
 import DateAndAddress from "../components/DateAndAddress.vue";
 import Arrow from "../components/composables/Arrow.vue";
 import { formatDate } from "../../lib/utils";
+import CardHeadline from "./composables/CardHeadline.vue";
+import Btn from "./composables/Btn.vue";
 
 type Delivery = {
   product: string;
@@ -172,7 +180,7 @@ export default {
     console.log(this.isActive);
   },
 
-  components: { DateAndAddress, Arrow },
+  components: { DateAndAddress, CardHeadline, Btn, Arrow },
 };
 </script>
 <style scoped>

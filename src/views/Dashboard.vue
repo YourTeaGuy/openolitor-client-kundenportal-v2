@@ -1,10 +1,10 @@
 <template>
-  <div>Dashboard</div>
+      <ViewHeadline text="Übersicht" />
 </template>
 
 <script lang="ts">
+import ViewHeadline from "../components/composables/ViewHeadline.vue";
 export default {
-  components: {
-  }
+  components: {ViewHeadline},
 }
 </script>

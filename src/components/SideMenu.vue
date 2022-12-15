@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-10 fixed">
+  <div class="mt-3 fixed">
     <div class="flex-col">
       <router-link
         v-for="(route, index) in menuItems"
@@ -45,9 +45,9 @@ export default {
 
 <style scoped>
 a {
-  @apply block py-3 hover:ml-2 active:ml-5 transition-all duration-100 ease-in-out hover:duration-500;
+  @apply text-xl block ml-3 py-2 hover:underline transition-all duration-100;
 }
 .indent {
-  @apply font-semibold ml-5 active:ml-5 transition-all duration-100 ease-in-out hover:duration-500;
+  @apply font-semibold ml-6 transition-all duration-100;
 }
 </style>

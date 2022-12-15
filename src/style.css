@@ -2,34 +2,44 @@
 @tailwind components;
 
 
+/* BUTTONS ======================================== */
+
 .btn {
-  /* abstract */
-  @apply rounded-md py-1 px-2 transition-all duration-300;
-}
-
-.btn:hover {
-  @apply transition-all duration-300;
-}
-
-.btn:active {
-  @apply outline outline-2 outline-black transition-none;
+  @apply rounded-full py-1 px-3 transition-colors duration-300 w-fit;
 }
 
 .btn-disabled {
-  @apply btn transition-none outline-none;
+  @apply btn bg-white cursor-not-allowed;
 }
 
-.btn-gray {
-  @apply bg-gray-500 text-gray-50;
+.btn-enabled {
+  @apply btn cursor-pointer active:outline active:outline-2;
 }
 
+/* BUTTON COLORS ======================================== */
 
+.color-default {
+  @apply bg-gray-300 hover:bg-gray-400 active:bg-gray-300 outline-black;
+}
+
+/* CLICKABLE TEXTS ======================================== */
+
+.txt-clickable {
+  @apply cursor-pointer hover:underline;
+}
+
+/* LABELS ======================================== */
+
+.label {
+  @apply bg-gray-300 rounded-full py-1 px-3 transition-colors duration-300 w-fit h-fit text-base;
+}
+
+.label-clickable {
+  @apply label hover:bg-gray-400;
+}
 
 @tailwind utilities;
 
 @layer components {
   /* maybe put arrow into own component with scoped css */
-
-
-
 }

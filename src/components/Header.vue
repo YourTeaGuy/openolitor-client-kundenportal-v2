@@ -17,14 +17,24 @@
             self-center
             text-lg
             sm:text-xl
-            hover:underline
             whitespace-nowrap
             text-white
+            txt-clickable
           "
           >Mitgliederportal</span
         >
       </a>
-      <span class="flex-col hidden lg:flex self-center text-xl mr-3 text-white"
+      <span
+        class="
+          flex-col
+          hidden
+          lg:flex
+          self-center
+          text-xl
+          mr-3
+          text-white
+          hover:underline
+        "
         >Abmelden</span
       >
       <BurgerMenu class="z-20 lg:hidden" @click="toggleMenu()" />
@@ -37,7 +47,7 @@
   </header>
 </template>
 
-<script  lang="ts">
+<script lang="ts">
 import BurgerMenu from "./BurgerMenu.vue";
 import MobileMenu from "./MobileMenu.vue";
 

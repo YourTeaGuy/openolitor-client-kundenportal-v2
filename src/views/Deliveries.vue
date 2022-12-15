@@ -4,7 +4,7 @@
     <div class="col-span-3">anteil</div>
   </div> -->
   <div class="lg:py-1 lg:px-2 md:px-6 sm:py-6">
-    <h2 class="font-semibold text-3xl mb-4">Alle Lieferungen:</h2>
+    <ViewHeadline text="Alle Lieferungen" />
     <div v-for="(share, index) in allShares" :key="index">
       <Delivery
         @toggleMe="toggleDelivery(index)"
@@ -17,6 +17,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+import ViewHeadline from "../components/composables/ViewHeadline.vue";
 import Delivery from "../components/Delivery.vue";
 export default {
   data() {
@@ -65,7 +66,7 @@ export default {
       ],
     };
   },
-  components: { Delivery },
+  components: { Delivery, ViewHeadline },
   methods: {
     toggleDelivery(index: number) {
       console.log("hi there", index);
